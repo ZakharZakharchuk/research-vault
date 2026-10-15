@@ -1,0 +1,26 @@
+# дані: великі й часто з обмеженою ліцензією — лише локально
+30_datasets/*
+!30_datasets/README.md
+
+.env
+.obsidian/workspace*
+.obsidian/graph.json
+__pycache__/
+*.pdf
+
+# out/ — робочі викиди пайплайну, крім журналу скринінгу: протокол називає
+# його доказом відтворюваності відбору, тому він під версійним контролем.
+# Ігноруємо ВМІСТ теки, а не саму теку.
+90_pipeline/out/*
+!90_pipeline/out/screening.md
+
+# службове: файли, які Claude не може видалити зі змонтованої папки
+_to_delete/
+
+# стандарти з обмеженням на відтворення — лише локальна копія
+00_admin/requirements/dstu-*.txt
+
+# проміжні файли збирання .docx
+90_pipeline/build_docx/*.json
+90_pipeline/build_docx/*.docx
+90_pipeline/build_docx/node_modules/
